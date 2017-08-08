@@ -2,11 +2,11 @@ require_relative 'piece'
 
 class Pawn < Piece
 
-  def initialize(pos, color)
-    
+  def initialize(pos, color,board)
+
     @symbol = "\u2659"
     @symbol.encode("utf-8")
-    super(pos, color)
+    super(pos, color,board)
   end
 
   def symbol

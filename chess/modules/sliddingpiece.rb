@@ -1,3 +1,0 @@
-module SliddingPiece
-
-end

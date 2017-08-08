@@ -5,7 +5,7 @@ class Board
 
   def initialize(fill_board = true)
     @sentinel = NullPiece.instance
-    make_starting_grid(fill_board)
+    make_starting_board(fill_board)
   end
 
   def [](pos)
@@ -116,7 +116,7 @@ class Board
     king_pos || (raise 'king not found?')
   end
 
-  def make_starting_grid(fill_board)
+  def make_starting_board(fill_board)
     @rows = Array.new(8) { Array.new(8, sentinel) }
     return unless fill_board
     [:white, :black].each do |color|

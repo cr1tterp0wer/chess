@@ -13,3 +13,7 @@ module SteppingPiece
 
   end
 end
+
+module SliddingPiece
+
+end

@@ -1,9 +1,11 @@
+require_relative 'modules/move_module.rb'
+
 class Piece
   attr_accessor :pos, :symbol, :board
   attr_reader :color
 
   def initialize(pos=[0,0], color, board)
-    @board = baord
+    @board = board
     @pos = pos
     @color = color
   end

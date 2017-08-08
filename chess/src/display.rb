@@ -7,10 +7,8 @@ class Display
     @board = board
     @cursor = Cursor.new([0,0], board)
   end
-
-
+  
   def render
-
     @board.grid.each_index do |row|
       @board.grid[row].each_index do |col|
         if [row, col] == @cursor.cursor_pos
