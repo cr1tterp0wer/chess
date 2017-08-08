@@ -5,7 +5,7 @@ require 'byebug'
 class Game
 
   def initialize(board=nil)
-  
+
     @board = board unless board.nil?
     @board ||= Board.starting_board
     @display = Display.new(@board)

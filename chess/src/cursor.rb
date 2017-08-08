@@ -85,14 +85,19 @@ class Cursor
       update_pos([0, -1])
     when :right
       update_pos([0, 1])
+    when :space
+      update_state
     when :ctrl_c
       system.exit("")
     end
   end
 
 
-  def update_pos(diff)
+  def update_state
+   @board.notify(@cursor_pos)
+  end
 
+  def update_pos(diff)
     @cursor_pos[0] = (@cursor_pos[0] + diff[0]) % @board.grid.length
     @cursor_pos[1] = (@cursor_pos[1] + diff[1]) % @board.grid.length
   end

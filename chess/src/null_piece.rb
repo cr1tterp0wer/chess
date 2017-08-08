@@ -15,9 +15,9 @@ class NullPiece < Piece
     "-"
   end
 
-  def inspect
-    @symbol.to_s
-  end
+  # def inspect
+  #   @symbol.to_s
+  # end
 
   def empty?()
     true

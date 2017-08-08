@@ -7,14 +7,21 @@ class Display
     @board = board
     @cursor = Cursor.new([0,0], board)
   end
-  
+
   def render
     @board.grid.each_index do |row|
       @board.grid[row].each_index do |col|
+        piece = @board[[row,col]]
+        p piece if [row,col] == [0,0]
         if [row, col] == @cursor.cursor_pos
-          print @board[[row,col]].symbol.colorize(:red)
+          print piece.symbol.colorize(:red)
         else
-          print @board[[row,col]].symbol.colorize(:blue)
+          if piece.selected
+            # byebug
+            print piece.symbol.colorize(:green)
+          else
+            print piece.symbol.colorize(:blue)
+          end
         end
       end
       puts "\n"
