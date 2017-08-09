@@ -4,7 +4,7 @@ class Pawn < Piece
 
   def initialize(pos, color,board)
 
-    @symbol = "\u2659"
+    @symbol = " \u2659 "
     @symbol.encode("utf-8")
     super(pos, color,board)
   end

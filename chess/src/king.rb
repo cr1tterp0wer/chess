@@ -4,7 +4,7 @@ class King < Piece
   include SteppingPiece
 
   def initialize(pos, color, board)
-    @symbol = "\u2654"
+    @symbol = " \u2654 "
     @symbol.encode("utf-8")
     super(pos, color,board)
   end

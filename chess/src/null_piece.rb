@@ -7,8 +7,9 @@ class NullPiece < Piece
   attr_reader :symbol
 
   def initialize()
-    @symbol = "\u25A0"
+    @symbol = "   "
     @symbol.encode("utf-8")
+    @color = :gold
   end
 
   def to_s

@@ -163,10 +163,10 @@ class Board
       case i
       when 0
         # grid[i] = self.king_row(i, :black)
-        board.place_king_row(i, :black)
+        board.place_king_row(i, :blue)
       when 1
         #grid[i] = self.pawn_row(i, :black)
-        board.place_pawn_row(i,:black)
+        board.place_pawn_row(i,:blue)
       when 6
         #grid[i] = self.pawn_row(i, :white)
         board.place_pawn_row(i,:white)

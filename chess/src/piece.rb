@@ -1,5 +1,5 @@
 require_relative 'modules/move_module.rb'
-
+require 'byebug'
 class Piece
   attr_accessor :symbol, :board
   attr_reader :pos, :color, :selected
@@ -29,7 +29,9 @@ class Piece
   end
 
   def valid_moves()
-    potential_moves = moves()
+    potential_moves = self.moves
+    potential_moves.reject!{|move| @board[move].color == @color }
+    potential_moves
   end
 
   def move_into_check(to_pos)
